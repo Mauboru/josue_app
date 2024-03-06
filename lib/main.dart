@@ -5,11 +5,11 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: 'Aula teste...'),
+      home: const MyHomePage(title: 'Aula teste...'),
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(255, 17, 187, 213),
+          seedColor: const Color.fromARGB(255, 17, 187, 213),
         ),
       ),
     ),
