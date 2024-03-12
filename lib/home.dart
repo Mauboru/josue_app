@@ -49,11 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Stack(
-          alignment: Alignment.topRight,
           children: [
             Container(
               width: 385.0,
+              height: 200,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
                 gradient: LinearGradient(
                   colors: [
                     Colors.blue.shade900,
@@ -66,12 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   end: Alignment.centerRight,
                 )
               ),
-              child: Card(
-                color: Colors.transparent,
-                child: Padding(
-                  padding: const EdgeInsets.all(100.0),
-                ),
-              ),
             ),
             Positioned(
                 top: 10,
@@ -81,9 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     'Rin Okumura',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.blue.shade100,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 25,
                     ),
                   ),
                 ),
@@ -94,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
-                  'Filho bastardo de Satan, odiado por todos em Assiah.',
+                  'Filho bastardo de Satan, odiado\npor todos em Assiah.',
                   style: TextStyle(color: Colors.white),
                   textAlign: TextAlign.left,
                 ),
@@ -103,10 +98,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Positioned(
               top: 10,
               right: 10,
-              child: Image.asset(
-                '../assets/images/okumura.jpg',
+              child: Container(
                 width: 100.0,
                 height: 100.0,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage('../assets/images/okumura.jpg'),
+                  ),
+                ),
               ),
             ),
             Positioned(
@@ -114,13 +114,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 left: 30,
                 child: Row(
                   children: [
+                    
                     Text(
                       'rinokumura@assiah.com',
                       style: TextStyle(color: Colors.white),
                     ),
                     Icon(
                       Icons.email,
-                      color: Colors.white,
+                      color: Colors.blue.shade100,
                     ),
                   ],
                 ),
