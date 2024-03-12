@@ -63,9 +63,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     Colors.blue.shade600,
                     Colors.blue.shade500,
                   ],
-                  begin: Alignment.centerLeft,
+                  begin: Alignment.topCenter,
                   end: Alignment.centerRight,
                 )
+              ),
+            ),
+            Positioned(
+              height: 200,
+              width: 385.0,
+              child: Image.asset(
+                '../assets/images/okumura.png',
+                opacity: const AlwaysStoppedAnimation(.35),
+                fit: BoxFit.cover,
               ),
             ),
             Positioned(
@@ -96,36 +105,38 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Positioned(
-              top: 10,
-              right: 10,
-              child: Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage('../assets/images/okumura.jpg'),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
                 bottom: 20,
                 left: 30,
                 child: Row(
-                  children: [
-                    
-                    Text(
-                      'rinokumura@assiah.com',
-                      style: TextStyle(color: Colors.white),
-                    ),
+                  children: <Widget>[
                     Icon(
                       Icons.email,
                       color: Colors.blue.shade100,
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'rinokumura@assiah.com',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Icon(
+                      Icons.phone,
+                      color: Colors.blue.shade100,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '+55666666689',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ],
-                ),
               ),
+            ),
           ],
         ),
       ),
